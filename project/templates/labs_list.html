@@ -1,0 +1,210 @@
+<!doctype html>
+<!--<html class="x-admin-sm">-->
+<head>
+    <meta charset="UTF-8">
+    <title>厦门大学科研数据共享平台</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="stylesheet" href="../static/css/font.css">
+    <link rel="stylesheet" href="../static/css/labslist.css">
+    <link rel="stylesheet" href="../static/css/xadmin.css">
+    <link rel="stylesheet" href="../static/lib/layui/css/layui.css">
+    <!-- <link rel="stylesheet" href="./css/theme5.css"> -->
+    <script src="../static/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../static/js/xadmin.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        // 是否开启刷新记忆tab功能
+        // var is_remember = false;
+    </script>
+</head>
+<body>
+<hr class="layui-bg-black">
+<!--实验室分类标签栏-->
+<div class="layui-row">
+    <div class="layui-card">
+        <div class="layui-col-md2 layui-card-header">
+            <a>实验室标签</a>
+        </div>
+        <div class="layui-col-md10 layui-card-body ">
+                <span class="layui-breadcrumb" lay-separator="|">
+                    <a href="">物理</a>
+                    <a href="">生物</a>
+                    <a href="">化学</a>
+                </span>
+        </div>
+    </div>
+    <!--        分割线-->
+    <!--        <hr class="layui-bg-black">-->
+    <!--&lt;!&ndash;        实验室排序标签栏&ndash;&gt;-->
+    <!--             <fieldset class="layui-elem-field layui-field-title">-->
+    <!--                <legend>排序</legend>-->
+    <!--                <div class="layui-field-box">-->
+    <div class="layui-row" style="margin-bottom: 5px">
+        <div class="layui-col-md2">
+            <a class="layui-btn layui-btn-radius layui-btn-primary" href="" style="margin-left: 10px">综合排序</a>
+            <div class="layui-inline" style="max-width: 5px">
+                <a class="layui-btn layui-slider-input-btn"><a class="layui-icon" href="">&#xe619</a> </a>
+                <a class="layui-btn layui-slider-input-btn"><a class="layui-icon" href="">&#xe61a</a> </a>
+            </div>
+        </div>
+
+<!--        <div class="layui-col-md2">-->
+<!--            <a class="layui-btn layui-btn-radius layui-btn-primary" href="" style="margin-left: 10px">更新时间</a>-->
+<!--            <div class="layui-inline" style="max-width: 5px">-->
+<!--                <a class="layui-btn layui-slider-input-btn"><a class="layui-icon" href="">&#xe619</a> </a>-->
+<!--                <a class="layui-btn layui-slider-input-btn"><a class="layui-icon" href="">&#xe61a</a> </a>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="layui-col-md2">
+            <a class="layui-btn layui-btn-radius layui-btn-primary" href="" style="margin-left: 10px">下载人数</a>
+            <div class="layui-inline" style="max-width: 5px">
+                <a class="layui-btn layui-slider-input-btn"><a class="layui-icon" href="">&#xe619</a> </a>
+                <a class="layui-btn layui-slider-input-btn"><a class="layui-icon" href="">&#xe61a</a> </a>
+            </div>
+        </div>
+        <div class="layui-col-md2">
+            <a class="layui-btn layui-btn-radius layui-btn-primary" href="" style="margin-left: 10px">星级评分</a>
+            <div class="layui-inline" style="max-width: 5px">
+                <a class="layui-btn layui-slider-input-btn"><a class="layui-icon" href="">&#xe619</a> </a>
+                <a class="layui-btn layui-slider-input-btn"><a class="layui-icon" href="">&#xe61a</a> </a>
+            </div>
+        </div>
+        <!--                    <hr class="layui-bg-orange">-->
+        <div class="layui-col-md2" style="margin-top: 5px">
+            <strong>
+                总共查找到 个结果
+            </strong>
+        </div>
+    </div>
+    <!--            </fieldset>-->
+    <!--开始实验室api卡片分页-->
+    <div class="layui-col-md12">
+        <div class="layui-row" id="pages">
+
+            <div class="layui-col-md3">
+                <div class=" layui-card" style="margin: 3px 3px">
+                    <div class="layui-card-header layui-bg-green">
+                        <a href="lab_detail.html"> 健康医疗大数据研究所
+                        </a>
+<!--                        星级评价展示-->
+                        <div class="layui-inline star_rate"></div>
+                    </div>
+                    <div class="layui-card-body lab-card layui-row">
+                        <div class="layui-col-md4 layui-col-sm6">
+                            <img src="../static/images/logo.png" class="lab-thumb">
+                        </div>
+                        <div class="layui-col-md8 layui-col-sm6">
+<!--                        简介超过三行就省略号-->
+                            <div class="layui-text lab-intro" >
+                            以精准临床医学为核心，以大数据技术为依托，以“健康中国”国家重大战略需求为导向，通过对临床和基础大数据的分析和挖掘，构建基于大数据的医学知识本体，并在此基础上针对疾病的发生，诊断和治疗展开多维度知识发现和人工智能研究
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md3">
+                <div class=" layui-card" style="margin: 3px 3px">
+                    <div class="layui-card-header layui-bg-green">健康医疗大数据研究所
+                        <!--                        星级评价展示-->
+                        <div class="layui-inline star_rate"></div>
+                    </div>
+                    <div class="layui-card-body lab-card layui-row">
+                        <div class="layui-col-md4 layui-col-sm6">
+                            <img src="../static/images/logo.png" class="lab-thumb">
+                        </div>
+                        <div class="layui-col-md8 layui-col-sm6">
+                            <!--                        简介超过三行就省略号-->
+                            <div class="layui-text lab-intro" >
+                                以精准临床医学为核心，以大数据技术为依托，以“健康中国”国家重大战略需求为导向，通过对临床和基础大数据的分析和挖掘，构建基于大数据的医学知识本体，并在此基础上针对疾病的发生，诊断和治疗展开多维度知识发现和人工智能研究
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md3">
+                <div class=" layui-card" style="margin: 3px 3px">
+                    <div class="layui-card-header layui-bg-green">健康医疗大数据研究所
+                        <div class="layui-inline star_rate"></div>
+                    </div>
+                    <div class="layui-card-body lab-card">实验室简介</div>
+                </div>
+            </div>
+
+            <div class="layui-col-md3">
+                <div class=" layui-card" style="margin: 3px 3px">
+                    <div class="layui-card-header layui-bg-green">健康医疗大数据研究所
+                        <div class="layui-inline star_rate"></div>
+                    </div>
+                    <div class="layui-card-body lab-card">实验室简介</div>
+                </div>
+            </div>
+
+            <div class="layui-col-md3">
+                <div class=" layui-card" style="margin: 3px 3px">
+                    <div class="layui-card-header layui-bg-green">健康医疗大数据研究所
+                        <div class="layui-inline star_rate"></div>
+                    </div>
+                    <div class="layui-card-body lab-card">实验室简介</div>
+                </div>
+            </div>
+
+            <div class="layui-col-md3">
+<!--                <a class="layui-btn layui-slider-input-btn" style="margin: auto auto">-->
+                <div class="layui-card" style="margin:3px 3px;">
+                    <div class="layui-icon" href="" style="font-size: 80px; margin: 0 auto;width:80px;">&#xe61f</div>
+                    <div style="text-align: center;padding-bottom: 10px;">添加实验室</div>
+                </div>
+<!--                </a>-->
+            </div>
+
+        </div>
+    </div>
+        <!--            换页按钮 以及页码列表 跳转-->
+        <div class="layui-col-md5 layui-col-lg-offset6 layui-btn-group" style="margin-top: 3px">
+            <button class="layui-btn layui-btn-primary"><a class="layui-icon" href="">&#xe603</a></button>
+            <button class="layui-btn layui-btn-primary"><a class="layui-icon" href="">&#xe602</a></button>
+        </div>
+
+    </div>
+</div>
+<script>
+    layui.use('rate', function () {
+        var rate = layui.rate;
+        var insl = rate.render({
+            elem: ".star_rate",
+            value: 5,
+            readonly: true
+        })
+    })
+</script>
+</body>
+</html>
+<!--</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</body>-->
+
+<!--</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</body>-->
+
+<!--</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</body>-->
+
+<!--</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</body>-->

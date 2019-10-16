@@ -1,0 +1,26 @@
+.white-background{
+    background-color: white;
+}
+.lab-card{
+    height: 90px;
+    /*text-overflow: ellipsis;*/
+}
+.star_rate{
+    float: right;
+    margin-top: -9px;
+    margin-right: -8px;
+}
+.lab-thumb{
+    margin-left: -15px;
+    margin-top: -10px;
+    height: 80px;
+    width: 80px;
+}
+.lab-intro{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    /*float: right;*/
+}
