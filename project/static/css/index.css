@@ -1,0 +1,17 @@
+.container{
+    height: 60px;
+    padding:10px 0;
+}
+
+.left-nav {
+    top: 60px;
+}
+
+.page-content {
+    top: 60px;
+}
+
+
+#nav li{
+    height:50px;
+}

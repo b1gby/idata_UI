@@ -9,9 +9,11 @@
           content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <link rel="stylesheet" href="../static/css/font.css">
-    <link rel="stylesheet" href="../static/css/labslist.css">
+
+
     <link rel="stylesheet" href="../static/css/xadmin.css">
     <link rel="stylesheet" href="../static/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../static/css/labslist.css">
     <!-- <link rel="stylesheet" href="./css/theme5.css"> -->
     <script src="../static/lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="../static/js/xadmin.js"></script>
@@ -26,7 +28,7 @@
     </script>
 </head>
 <body>
-<hr class="layui-bg-black">
+
 <!--实验室分类标签栏-->
 <div class="layui-row">
     <div class="layui-card">
@@ -87,9 +89,9 @@
     <!--            </fieldset>-->
     <!--开始实验室api卡片分页-->
     <div class="layui-col-md12">
-        <div class="layui-row" id="pages">
+        <!--<div class="layui-row" id="pages">-->
 
-            <div class="layui-col-md3">
+            <div class="lab_part">
                 <div class=" layui-card" style="margin: 3px 3px">
                     <div class="layui-card-header layui-bg-green">
                         <a href="lab_detail.html"> 健康医疗大数据研究所
@@ -98,7 +100,7 @@
                         <div class="layui-inline star_rate"></div>
                     </div>
                     <div class="layui-card-body lab-card layui-row">
-                        <div class="layui-col-md4 layui-col-sm6">
+                        <div class="layui-col-md4 layui-col-sm6 lab_img">
                             <img src="../static/images/logo.png" class="lab-thumb">
                         </div>
                         <div class="layui-col-md8 layui-col-sm6">
@@ -111,14 +113,14 @@
                 </div>
             </div>
 
-            <div class="layui-col-md3">
+            <div class="lab_part">
                 <div class=" layui-card" style="margin: 3px 3px">
                     <div class="layui-card-header layui-bg-green">健康医疗大数据研究所
                         <!--                        星级评价展示-->
                         <div class="layui-inline star_rate"></div>
                     </div>
                     <div class="layui-card-body lab-card layui-row">
-                        <div class="layui-col-md4 layui-col-sm6">
+                        <div class="layui-col-md4 layui-col-sm6 lab_img">
                             <img src="../static/images/logo.png" class="lab-thumb">
                         </div>
                         <div class="layui-col-md8 layui-col-sm6">
@@ -131,7 +133,17 @@
                 </div>
             </div>
 
-            <div class="layui-col-md3">
+            <div class="lab_part">
+                            <div class=" layui-card" style="margin: 3px 3px">
+                    <div class="layui-card-header layui-bg-green">健康医疗大数据研究所
+                        <div class="layui-inline star_rate"></div>
+                    </div>
+                    <div class="layui-card-body lab-card">实验室简介</div>
+                </div>
+            </div>
+
+            <div class="lab_part">
+
                 <div class=" layui-card" style="margin: 3px 3px">
                     <div class="layui-card-header layui-bg-green">健康医疗大数据研究所
                         <div class="layui-inline star_rate"></div>
@@ -140,7 +152,8 @@
                 </div>
             </div>
 
-            <div class="layui-col-md3">
+            <div class="lab_part">
+
                 <div class=" layui-card" style="margin: 3px 3px">
                     <div class="layui-card-header layui-bg-green">健康医疗大数据研究所
                         <div class="layui-inline star_rate"></div>
@@ -149,25 +162,8 @@
                 </div>
             </div>
 
-            <div class="layui-col-md3">
-                <div class=" layui-card" style="margin: 3px 3px">
-                    <div class="layui-card-header layui-bg-green">健康医疗大数据研究所
-                        <div class="layui-inline star_rate"></div>
-                    </div>
-                    <div class="layui-card-body lab-card">实验室简介</div>
-                </div>
-            </div>
 
-            <div class="layui-col-md3">
-<!--                <a class="layui-btn layui-slider-input-btn" style="margin: auto auto">-->
-                <div class="layui-card" style="margin:3px 3px;">
-                    <div class="layui-icon" href="" style="font-size: 80px; margin: 0 auto;width:80px;">&#xe61f</div>
-                    <div style="text-align: center;padding-bottom: 10px;">添加实验室</div>
-                </div>
-<!--                </a>-->
-            </div>
-
-        </div>
+        <!--</div>-->
     </div>
         <!--            换页按钮 以及页码列表 跳转-->
         <div class="layui-col-md5 layui-col-lg-offset6 layui-btn-group" style="margin-top: 3px">

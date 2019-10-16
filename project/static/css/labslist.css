@@ -1,8 +1,19 @@
+body{
+    margin:0 50px;
+}
+
 .white-background{
     background-color: white;
 }
+
+.lab_part{
+    float: left;
+    width:450px;
+    margin:5px 28px 12px 5px;
+}
+
 .lab-card{
-    height: 90px;
+    height: 120px;
     /*text-overflow: ellipsis;*/
 }
 .star_rate{
@@ -11,11 +22,15 @@
     margin-right: -8px;
 }
 .lab-thumb{
-    margin-left: -15px;
-    margin-top: -10px;
+    margin:20px;
     height: 80px;
     width: 80px;
 }
+
+.lab_img{
+    width:auto;
+}
+
 .lab-intro{
     text-overflow: ellipsis;
     overflow: hidden;
