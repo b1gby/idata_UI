@@ -1,0 +1,153 @@
+<!doctype html>
+<html class="x-admin-sm">
+<head>
+    <meta charset="UTF-8">
+    <title>厦门大学科研数据共享平台</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="stylesheet" href="../static/css/font.css">
+    <link rel="stylesheet" href="../static/css/xadmin.css">
+    <link rel="stylesheet" href="../static/css/lab_detail.css">
+    <!-- <link rel="stylesheet" href="./css/theme5.css"> -->
+    <script src="../static/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../static/js/xadmin.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <script>
+        // 是否开启刷新记忆tab功能
+        // var is_remember = false;
+    </script>
+</head>
+<body>
+
+<!--实验室简介-->
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>实验室简介</legend>
+</fieldset>
+<div class="lab_info">
+
+    <div class="lab_logo">
+        <img src="../static/images/lab_logo.jpg" class="lab_logo_img">
+    </div>
+    <div class="lab-dinfo">
+        <!--名称-->
+        <div class="lab_name">
+            厦门大学健康医疗大数据实验室
+        </div>
+        <!--星级-->
+        <div>
+
+        </div>
+    </div>
+    <!--简介-->
+    <div class="lab_info_text">
+        简介：厦门大学健康医疗大数据国家研究院（以下简称“研究院”）是由中国卫生信息与健康医疗大数据学会和厦门大学联合发起并建设的，于2018
+        年9月正式挂牌成立。研究院成立理事会，执行双理事长制，首期理事长由原国家卫生和计划生育委员会副主任、中国卫生信息与健康医疗大
+        数据学会会长金小桃，和我校校长张荣担任，副校长韩家淮院士担任首任院长。研究院以促进卫生健康事业发展，提高人民群众获得感为宗
+        旨，通过自主创新和跨学科合作，产生一批国内领先、国际一流的具有良好产业转化价值研究成果，并推动健康医疗大数据相关研究成果的
+        转化。同时，研究院将致力于培养健康医疗大数据领军人才和创新人才，为健康医疗大数据产业的健康发展提供有力的人才和技术支持，为
+        推进“健康中国”、“数字中国”建设贡献力量。
+    </div>
+</div>
+
+
+<!--实验室成员-->
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;clear: both;">
+    <legend>实验室成员</legend>
+</fieldset>
+<div>
+
+
+    <div style="height: auto;width: auto;position: relative;">
+        <button type="button" id='charge_member' class="layui-btn layui-btn-warm">管理成员</button>
+
+        <table class="layui-table member_table" lay-size="lg">
+        <colgroup>
+            <col width="150px">
+            <col width="200px">
+            <col width="150px">
+        </colgroup>
+        <thead>
+        <tr>
+            <th style="text-align: center">姓名</th>
+            <th style="text-align: center">加入时间</th>
+            <th style="text-align: center">职称</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>王××</td>
+            <td>2019-10-7</td>
+            <td>负责人</td>
+        </tr>
+        <tr>
+            <td>李××</td>
+            <td>2019-10-8</td>
+            <td>管理员</td>
+        </tr>
+        <tr>
+            <td>赵××</td>
+            <td>2019-10-9</td>
+            <td>成员</td>
+        </tr>
+
+        </tbody>
+    </table>
+    </div>
+
+
+</div>
+
+<!--实验室数据-->
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>实验室数据</legend>
+</fieldset>
+<div >
+
+    <table class="layui-table data_table" lay-even="" lay-skin="nob">
+        <colgroup>
+            <col width="200">
+            <col width="100">
+            <col width="200">
+            <col width="100">
+        </colgroup>
+        <thead>
+        <tr>
+            <th style="text-align: center">名称</th>
+            <th style="text-align: center">类别</th>
+            <th style="text-align: center">更新时间</th>
+            <th style="text-align: center">下载人数</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href=data_detail.html style="color: #3c65f7">111.xxx</a></td>
+            <td>生物基因</td>
+            <td>2019-10-7</td>
+            <td>1535</td>
+        </tr>
+        <tr>
+            <td><a href=# style="color: #3c65f7">222.xxx</a></td>
+            <td>生物基因</td>
+            <td>2019-10-8</td>
+            <td>435</td>
+        </tr>
+        <tr>
+            <td><a href=# style="color: #3c65f7">333.xxx</a></td>
+            <td>生物基因</td>
+            <td>2019-10-9</td>
+            <td>32</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
