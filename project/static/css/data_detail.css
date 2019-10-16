@@ -1,0 +1,54 @@
+body{
+    background-color: white;
+}
+
+.data_name {
+    margin: 40px 100px 80px 90px;
+    padding-bottom: 30px;
+}
+
+.data_name_text{
+    font-size: 80px;
+    float: left;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.data_label {
+    float: left;
+    margin-top: 55px;
+}
+
+.data_lab{
+    clear: both;
+    font-size: 20px;
+    margin: 10px 10px 10px 100px;
+
+}
+
+.data_size{
+    font-size: 20px;
+    margin: 10px 10px 10px 100px;
+
+}
+
+.data_date{
+    font-size: 20px;
+    margin:10px 10px 80px 100px;
+}
+
+#download_button{
+    width:200px;
+    height:50px;
+    font-size: 20px;
+    margin:120px 10px 10px 50px;
+}
+
+.achievement_table{
+    width:80%;
+    margin-left: 50px;
+}
+
+td{
+    text-align: center;
+}

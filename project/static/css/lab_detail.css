@@ -1,0 +1,58 @@
+body{
+    background-color: white;
+}
+
+.lab_info {
+    margin: 40px 200px 40px 80px
+}
+
+
+.lab_logo {
+    border-radius: 50%;
+    float: left;
+    margin-right:60px;
+    padding-bottom: 20px;
+}
+
+.lab_logo_img {
+    width:220px;
+    height: 220px;
+
+}
+
+.lab_dinfo{
+    float: left;
+
+}
+
+.lab_name {
+    font-size:30px;
+    margin-bottom: 30px;
+}
+
+.lab_info_text{
+    font-size:15px;
+    /*text-indent: 2em;*/
+}
+
+.member_table{
+    width:70%;
+    margin: 10px 0 10px 50px;
+}
+
+#charge_member {
+    position:absolute;
+    top:5px;
+    right: 0;
+}
+
+.data_table{
+    width:80%;
+    margin-left: 50px;
+}
+
+
+td,th{
+    text-align: center;
+    font-size: 17px;
+}
