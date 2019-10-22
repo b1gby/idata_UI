@@ -11,6 +11,7 @@
     <meta name="format-detection" content="telephone=no">
 
     <link rel="stylesheet" href="../static/css/layui.css">
+    <script src="../static/lib/layui/layui.js"></script>
 
     <style>
         body {
@@ -34,14 +35,15 @@
     <div class="layui-form-item">
         <label class="layui-form-label">头像</label>
         <div class="layui-input-block">
-            <img src="../static/images/photo.jpg" class="round_icon" alt="">
+            <img src="../static/images/head_photo.png" class="round_icon" alt="">
         </div>
         <div class="layui-input-block">
             <div class="layui-upload">
-                <button type="button" class="layui-btn" id="test1">上传图片</button>
+                <button type="button" class="layui-btn" style="margin: 5px 3px" id="test1">上传图片</button>
 
                 <div class="layui-upload-list">
-                    <img class="layui-upload-img" src="" id="demo1">
+<!--                    <img class="layui-upload-img" src="../static/images/head_photo.png" id="demo1">-->
+<!--                    <i class="layui-icon layui-icon-add-circle-fine"></i>-->
                     <p id="demoText"></p>
                 </div>
             </div>
@@ -49,11 +51,12 @@
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">用户名</label>
-        <div class="layui-input-block">
+        <div class="layui-input-block" style="width: 25%">
             <label>
                 <input type="text" name="title" lay-verify="required|title" lay-reqText="标题不能为空" required
                        placeholder="请输入标题" autocomplete="off" class="layui-input">
             </label>
+<!--            <div class="layui-form-mid layui-word-aux">带*号的为选填</div>-->
         </div>
     </div>
     <div class="layui-form-item">
@@ -64,39 +67,37 @@
                        class="layui-input">
             </label>
         </div>
-        <div class="layui-form-mid layui-word-aux">请务必填写用户名</div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">手机</label>
-        <div class="layui-input-block">
+        <div class="layui-input-block" style="width: 25%">
             <label>
-                <input type="tel" name="phone" lay-verify="required|number" lay-verType="tips" autocomplete="off"
+                <input type="tel" name="phone" lay-verify="required|number" placeholder="联系电话" lay-verType="tips" autocomplete="off"
                        class="layui-input">
             </label>
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">邮箱</label>
-        <div class="layui-input-block">
+        <div class="layui-input-block" style="width: 25%">
             <label>
-                <input type="email" name="email" lay-verify="email" lay-verType="alert" autocomplete="off"
+                <input type="email" name="email" lay-verify="email" lay-verType="alert" placeholder="联系邮箱" autocomplete="off"
                        class="layui-input">
             </label>
         </div>
     </div>
     <div class="layui-form-item">
-        <label class="layui-form-label">生日</label>
+        <label class="layui-form-label">请选择生日</label>
         <div class="layui-inline">
             <div class="layui-input-inline">
-                <input type="text" class="layui-input" id="testx" placeholder="yyyy-MM-dd">
-
+                <input type="text" class="layui-input" id="testx" placeholder="YYYY-MM-DD">
             </div>
         </div>
     </div>
 
     <div class="layui-form-item">
         <label class="layui-form-label">专业</label>
-        <div class="layui-input-block">
+        <div class="layui-input-block" style="width: 25%">
             <select name="interest" lay-filter="interest">
                 <option value=""></option>
                 <option value="0">数学</option>
@@ -117,8 +118,8 @@
     </div>
     <div class="layui-form-item layui-form-text">
         <label class="layui-form-label">个人简介</label>
-        <div class="layui-input-block">
-            <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+        <div class="layui-input-block" style="width: 50%">
+            <textarea placeholder="请输入，字数：10~100" class="layui-textarea" name="desc"></textarea>
         </div>
     </div>
     <div class="layui-form-item">
@@ -130,7 +131,6 @@
 </form>
 
 
-<script src="../src/layui.js"></script>
 
 <script>
 
@@ -157,13 +157,13 @@
 
         //初始赋值
         var thisValue = form.val('first', {
-            'title': '测试'
-            , 'phone': 11111111111
-            , 'email': 'xu@sentsin.com'
+            'title': ''
+            , 'phone': ''
+            , 'email': ''
             , 'password': 123123
             , 'interest': 3
             , 'sex': '男'
-            , 'desc': 'form 是我们非常看重的一块'
+            , 'desc': ''
             , xxxxxxxxx: 123
         });
         console.log(thisValue);

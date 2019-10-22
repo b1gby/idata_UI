@@ -24,8 +24,7 @@
         // var is_remember = false;
     </script>
 </head>
-<body >
-<hr class="layui-bg-black">
+<body style="margin: 0 50px">
 <!--实验室分类标签栏-->
 <div class="layui-row">
     <div class="layui-card">
@@ -45,7 +44,9 @@
 <!--    <div class="layui-row" style="margin-bottom: 5px">-->
 <!--    </div>-->
 
+<div style="width: 70%">
     <table id="list"></table>
+</div>
 <!--        lay-filter="api_table">-->
 <!--        <colgroup>-->
 <!--            <col>-->
@@ -85,7 +86,7 @@
                 {field: 'city', title: '数据标题'},
                 {field: 'zone', title: '类别', width: 250},
                 {field: 'address', title: '更新时间', width: 120},
-                {field: 'amount', title: '下载次数', width: 100}
+                {field: 'amount', title: '下载次数', width: 150, sort: true}
                 ]]
             // , data = [{'title': "测试数据名称", 'group': "物理",'update_time': "2019-9-20",'download_times': 3}]
         });
