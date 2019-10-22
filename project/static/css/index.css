@@ -1,10 +1,12 @@
 .container{
     height: 60px;
     padding:10px 0;
+    background-color: black;
 }
 
 .left-nav {
     top: 60px;
+    background-color: #0C0C0C;
 }
 
 .page-content {
@@ -14,4 +16,14 @@
 
 #nav li{
     height:50px;
+
+}
+
+#nav li *{
+    color:white;
+}
+
+.layui-tab-title{
+    margin-top: 10px;
+    height:30px;
 }
