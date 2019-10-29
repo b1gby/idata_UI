@@ -10,15 +10,16 @@
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <link rel="stylesheet" href="../static/css/font.css">
     <link rel="stylesheet" href="../static/css/xadmin.css">
-    <link rel="stylesheet" href="../static/css/lab_detail.css">
     <!-- <link rel="stylesheet" href="./css/theme5.css"> -->
     <script src="../static/lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="../static/js/xadmin.js"></script>
+    <script src="../static/lib/layui/layui.js" charset="utf-8"></script>
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
           <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
           <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+    <link rel="stylesheet" href="../static/css/lab_detail.css">
     <script>
         // 是否开启刷新记忆tab功能
         // var is_remember = false;
@@ -73,12 +74,14 @@
             <col width="150px">
             <col width="200px">
             <col width="150px">
+            <col width="250px">
         </colgroup>
         <thead>
         <tr>
             <th style="text-align: center">姓名</th>
             <th style="text-align: center">加入时间</th>
             <th style="text-align: center">职称</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -86,16 +89,28 @@
             <td>王××</td>
             <td>2019-10-7</td>
             <td>负责人</td>
+            <td style="padding: 15px 10px">
+                <a class="layui-btn layui-btn-danger" style="height: 28px; line-height: 28px"  lay-event="add" >删除</a>
+                <a class="layui-btn layui-btn-normal" style="height: 28px; line-height: 28px"  lay-event="add" >编辑</a>
+            </td>
         </tr>
         <tr>
             <td>李××</td>
             <td>2019-10-8</td>
             <td>管理员</td>
+            <td style="padding: 15px 10px">
+                <a class="layui-btn layui-btn-danger" style="height: 28px; line-height: 28px"  lay-event="add" >删除</a>
+                <a class="layui-btn layui-btn-normal" style="height: 28px; line-height: 28px"  lay-event="add" >编辑</a>
+            </td>
         </tr>
         <tr>
             <td>赵××</td>
             <td>2019-10-9</td>
             <td>成员</td>
+            <td style="padding: 15px 10px">
+                <a class="layui-btn layui-btn-danger" style="height: 28px; line-height: 28px"  lay-event="add" >删除</a>
+                <a class="layui-btn layui-btn-normal" style="height: 28px; line-height: 28px"  lay-event="add" >编辑</a>
+            </td>
         </tr>
 
         </tbody>
@@ -148,6 +163,13 @@
         </tbody>
     </table>
 </div>
-
+<!--<script>-->
+<!--    layui.use('table', function () {-->
+<!--        var  table = layui.table;-->
+<!--        table.render({-->
+<!--            elem:-->
+<!--        })-->
+<!--    })-->
+<!--</script>-->
 </body>
 </html>
