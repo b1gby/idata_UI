@@ -11,7 +11,8 @@
     <meta name="format-detection" content="telephone=no">
 
     <link rel="stylesheet" href="../static/css/layui.css">
-
+    <link rel="stylesheet" href="../static/lib/layui/css/layui.css">
+    <script src="../static/lib/layui/layui.js" type="text/javascript"></script>
     <style>
         body {
             padding: 10px;
@@ -20,7 +21,7 @@
 </head>
 <body>
 
-<form class="layui-form layui-form-pane1" action="" lay-filter="first">
+<form class="layui-form layui-form-pane1" style="margin-top: 10px" action="" lay-filter="first">
     <div class="layui-form-item">
         <label class="layui-form-label">实验室名称</label>
         <div class="layui-input-block">
@@ -77,6 +78,25 @@
             <input type="checkbox" name="others" title="其他">
         </div>
     </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">实验室成员</label>
+    </div>
+    <table class="layui-table" lay-data="{url:'../static/json/table_test.json', id:'test3'}"
+           lay-filter="test3">
+        <thead>
+        <tr>
+<!--            <th lay-data="{type:'checkbox'}">ID</th>-->
+            <!--                <th lay-data="{field:'id', width:80, sort: true}">ID</th>-->
+            <th lay-data="{field:'username', width:120, sort: true, edit: 'text'}">成员名称</th>
+            <th lay-data="{field:'email', edit: 'text', Width: 25}">邮箱</th>
+            <th lay-data="{field:'sex', width:80, edit: 'text'}">性别</th>
+            <!--                <th lay-data="{field:'city', edit: 'text', minWidth: 100}">城市</th>-->
+            <th lay-data="{field:'experience', edit: 'text'}">职称</th>
+            <th lay-data="{fixed: 'right', width:178, align:'center', toolbar: '#barDemo'}"></th>
+        </tr>
+        </thead>
+    </table>
+
     <div class="layui-form-item layui-form-text">
         <label class="layui-form-label">实验室简介</label>
         <div class="layui-input-block">
@@ -94,10 +114,48 @@
 <br><br><br>
 
 
-<script src="../src/layui.js"></script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+<!--    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>-->
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+
 <!-- <script src="../build/lay/dest/layui.all.js"></script> -->
 
 <script>
+    // 添加实验室成员数据表格，可编辑
+    layui.use('table', function () {
+        var table = layui.table;
+        // table.render({
+        //     margin: 30px 0px
+        // })
+        // tool(数据表lay-filter属性)
+        // table.done(function (res, curr, count) {
+        //     $(.layui-)
+        // })
+        table.on('tool(test3)', function (obj) {
+            var data = obj.data;
+            if (obj.event === 'detail') {
+                layer.msg('姓名' + data.username + ' 的查看操作');
+            } else if (obj.event === 'del') {
+                layer.confirm('真的删除该成员么', function (index) {
+                    obj.del();
+                    layer.close(index);
+                });
+            }
+            // } else if (obj.event === 'edit') {
+            //     layer.alert('编辑行：<br>' + JSON.stringify(data))
+            // }
+        });
+
+        //监听单元格编辑
+        table.on('edit(test3)', function (obj) {
+            var value = obj.value //得到修改后的值
+                , data = obj.data //得到所在行所有键值
+                , field = obj.field; //得到字段
+            // layer.msg('[ID: ' + data.id + '] ' + field + ' 字段更改为：' + value);
+        });
+    });
 
     layui.use(['form', 'layedit', 'laydate'], function () {
         var form = layui.form

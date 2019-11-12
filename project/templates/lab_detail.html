@@ -14,11 +14,12 @@
     <script src="../static/lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="../static/js/xadmin.js"></script>
     <script src="../static/lib/layui/layui.js" charset="utf-8"></script>
+    <script src="../static/lib/layui/css/modules/layer/default/layer.css"></script>
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
-          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <link rel="stylesheet" href="../static/css/lab_detail.css">
     <script>
         // 是否开启刷新记忆tab功能
@@ -57,74 +58,118 @@
         推进“健康中国”、“数字中国”建设贡献力量。
     </div>
 </div>
+<style>
+    body {
+        padding: 20px;
+    }
 
+    .card {
+        padding: 20px 20px;
+        margin-right: 20px;
+        width: 120px;
+        height: 175px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+        float: left;
+        align-content: center;
+    }
+
+    .round_icon {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        margin: 5px auto;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: #5FB878;
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        box-shadow: #2D93CA;
+    }
+</style>
 
 <!--实验室成员-->
 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;clear: both;">
     <legend>实验室成员</legend>
 </fieldset>
-<div>
-
-
+<div style="margin-left: 50px; height: 250px">
+    <div class="card">
+        <div class="round_icon">
+            <h1>李</h1>
+        </div>
+        <h2>李XX</h2>
+        <h2>管理员兼教学助理</h2>
+    </div>
+    <div class="card">
+        <div class="round_icon">
+            <h1>王</h1>
+        </div>
+        <h2>王XX</h2>
+        <h2>负责人</h2>
+    </div>
+</div>
+<!--div>
     <div style="height: auto;width: auto;position: relative;">
         <button type="button" id='charge_member' class="layui-btn layui-btn-warm">管理成员</button>
 
         <table class="layui-table member_table" lay-size="lg">
-        <colgroup>
-            <col width="150px">
-            <col width="200px">
-            <col width="150px">
-            <col width="250px">
-        </colgroup>
-        <thead>
-        <tr>
-            <th style="text-align: center">姓名</th>
-            <th style="text-align: center">加入时间</th>
-            <th style="text-align: center">职称</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>王××</td>
-            <td>2019-10-7</td>
-            <td>负责人</td>
-            <td style="padding: 15px 10px">
-                <a class="layui-btn layui-btn-danger" style="height: 28px; line-height: 28px"  lay-event="add" >删除</a>
-                <a class="layui-btn layui-btn-normal" style="height: 28px; line-height: 28px"  lay-event="add" >编辑</a>
-            </td>
-        </tr>
-        <tr>
-            <td>李××</td>
-            <td>2019-10-8</td>
-            <td>管理员</td>
-            <td style="padding: 15px 10px">
-                <a class="layui-btn layui-btn-danger" style="height: 28px; line-height: 28px"  lay-event="add" >删除</a>
-                <a class="layui-btn layui-btn-normal" style="height: 28px; line-height: 28px"  lay-event="add" >编辑</a>
-            </td>
-        </tr>
-        <tr>
-            <td>赵××</td>
-            <td>2019-10-9</td>
-            <td>成员</td>
-            <td style="padding: 15px 10px">
-                <a class="layui-btn layui-btn-danger" style="height: 28px; line-height: 28px"  lay-event="add" >删除</a>
-                <a class="layui-btn layui-btn-normal" style="height: 28px; line-height: 28px"  lay-event="add" >编辑</a>
-            </td>
-        </tr>
+            <colgroup>
+                <col width="150px">
+                <col width="200px">
+                <col width="150px">
+                <col width="250px">
+            </colgroup>
+            <thead>
+            <tr>
+                <th style="text-align: center">姓名</th>
+                <th style="text-align: center">加入时间</th>
+                <th style="text-align: center">职称</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>王××</td>
+                <td>2019-10-7</td>
+                <td>负责人</td>
+                <td style="padding: 15px 10px">
+                    <a class="layui-btn layui-btn-danger" style="height: 28px; line-height: 28px" lay-event="add">删除</a>
+                    <a class="layui-btn layui-btn-normal" style="height: 28px; line-height: 28px" lay-event="add">编辑</a>
+                </td>
+            </tr>
+            <tr>
+                <td>李××</td>
+                <td>2019-10-8</td>
+                <td>管理员</td>
+                <td style="padding: 15px 10px">
+                    <a class="layui-btn layui-btn-danger" style="height: 28px; line-height: 28px" lay-event="add">删除</a>
+                    <a class="layui-btn layui-btn-normal" style="height: 28px; line-height: 28px" lay-event="add">编辑</a>
+                </td>
+            </tr>
+            <tr>
+                <td>赵××</td>
+                <td>2019-10-9</td>
+                <td>成员</td>
+                <td style="padding: 15px 10px">
+                    <a class="layui-btn layui-btn-danger" style="height: 28px; line-height: 28px" lay-event="add">删除</a>
+                    <a class="layui-btn layui-btn-normal" style="height: 28px; line-height: 28px" lay-event="add">编辑</a>
+                </td>
+            </tr>
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
     </div>
+-->
 
-
-</div>
+<!--</div>-->
 
 <!--实验室数据-->
 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
     <legend>实验室数据</legend>
 </fieldset>
-<div >
+<div>
 
     <table class="layui-table data_table" lay-even="" lay-skin="nob">
         <colgroup>
