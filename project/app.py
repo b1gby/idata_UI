@@ -21,10 +21,17 @@ def login():
     elif request.method == 'POST':
         name = request.form['username']
         passwd = request.form['password']
+
         if name != '' and passwd != '':
-            return render_template('index.html', name=name)
+            return render_template("index.html", name=name)
+
         else:
             return render_template('login.html')
+
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
 
 
 if __name__ == '__main__':
